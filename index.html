@@ -3,14 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luis Alanoca | Salesforce & Product Owner</title>
+  <meta name="description" content="Portfólio de Luis Alanoca - Business Relationship Manager e Salesforce Product Owner especialista em LATAM.">
+  <title>Luis Alanoca | BRM & Salesforce Product Owner</title>
 
   <style>
+    /* Variáveis para facilitar a manutenção das cores */
+    :root {
+      --bg-color: #0b0f19;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --primary-color: #6366f1;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-border: rgba(255, 255, 255, 0.06);
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', 'Segoe UI', sans-serif;
-      background: #0b0f19;
-      color: #e5e7eb;
+      background: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
     }
 
     .container {
@@ -19,8 +31,9 @@
       padding: 60px 20px;
     }
 
+    /* Tipografia */
     h1 {
-      font-size: 48px;
+      font-size: clamp(36px, 5vw, 48px);
       margin-bottom: 10px;
       font-weight: 600;
       letter-spacing: -1px;
@@ -28,76 +41,101 @@
 
     h2 {
       margin-top: 60px;
-      font-size: 22px;
-      color: #9ca3af;
-      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: var(--text-main);
+      font-weight: 600;
+      border-bottom: 2px solid var(--card-border);
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: var(--text-main);
     }
 
     p {
-      line-height: 1.6;
-      color: #9ca3af;
-    }
-
-    .hero p {
-      max-width: 600px;
+      color: var(--text-muted);
     }
 
     .subtitle {
-      font-size: 16px;
-      color: #6366f1;
+      font-size: 18px;
+      color: var(--primary-color);
+      font-weight: 500;
       margin-bottom: 20px;
     }
 
+    /* Componentes */
     .card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-      transition: 0.2s;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
     }
 
     .card:hover {
-      border-color: #6366f1;
+      border-color: var(--primary-color);
+      transform: translateY(-2px);
     }
 
     .grid {
       display: grid;
       gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
     ul {
       padding-left: 20px;
+      color: var(--text-muted);
     }
 
     li {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+    }
+
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .tag {
-      display: inline-block;
-      font-size: 12px;
-      padding: 6px 10px;
+      font-size: 13px;
+      padding: 6px 14px;
       border-radius: 20px;
-      background: rgba(255,255,255,0.05);
-      margin: 5px;
+      background: rgba(99, 102, 241, 0.1);
+      color: #818cf8;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .contact a {
-      display: block;
-      margin-top: 8px;
-      color: #6366f1;
+      color: var(--primary-color);
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .contact a:hover {
+      color: #818cf8;
+      text-decoration: underline;
     }
 
     footer {
       margin-top: 80px;
       text-align: center;
-      font-size: 13px;
-      color: #6b7280;
+      font-size: 14px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--card-border);
+      padding-top: 20px;
     }
-
   </style>
 </head>
 
@@ -105,143 +143,105 @@
 
 <div class="container">
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>Luis Alanoca</h1>
-    <p class="subtitle">Salesforce Analyst & Product Owner</p>
-
-    <p>
-      Especialista em transformação de processos e implementação de soluções Salesforce
-      em ambientes LATAM complexos.
+  <header class="hero">
+    <h1>Luis Gustavo Alanoca</h1>
+    <p class="subtitle">Business Relationship Manager (BRM) & Salesforce Product Owner</p>
+    <p style="max-width: 650px;">
+      Especialista em transformação digital, unindo visão de negócios, arquitetura Salesforce e Design UX/UI para liderar a implementação de soluções em ambientes corporativos de alta complexidade em toda a América Latina.
     </p>
-  </div>
+  </header>
 
-  <!-- SOBRE -->
-  <h2>Sobre</h2>
-  <div class="card">
-    <p>
-      Atuo na interseção entre tecnologia e negócio, liderando iniciativas Salesforce
-      em ambientes multinacionais.
-    </p>
+  <main>
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <div class="card">
+        <p>
+          Atuo na interseção entre tecnologia, experiência do usuário e estratégia de negócios. Com um background que transita pelo Design e Marketing, foco em garantir que as soluções tecnológicas adotadas resolvam problemas reais e gerem impacto medível.
+        </p>
+        <p>
+          Possuo vasta experiência em definição de roadmap, priorização de backlog e alinhamento com stakeholders multidisciplinares, liderando rollouts do ecossistema Salesforce (Service Cloud, Email-to-Case, Field Service) em escala internacional.
+        </p>
+      </div>
+    </section>
 
-    <p>
-      Experiência prática em definição de roadmap, priorização de backlog e implementação
-      de soluções como Email-to-Case, Field Service e integrações omnichannel.
-    </p>
-  </div>
+    <section id="experiencia">
+      <h2>Experiência Corporativa</h2>
 
-  <!-- EXPERIÊNCIA -->
-  <h2>Experiência</h2>
+      <article class="card">
+        <h3>Electrolux Group</h3>
+        <p class="subtitle" style="font-size: 15px; margin-bottom: 10px;">Business Relationship Manager / PO Salesforce LATAM | Set/2021 – Presente</p>
+        <p>Atuação estratégica liderando projetos e conectando áreas de negócio e TI na América Latina.</p>
+        <ul>
+          <li><strong>Expansão LATAM:</strong> Levantamento de escopo e atuação como PO para implementação do Salesforce no Equador, Peru e Colômbia.</li>
+          <li><strong>Projeto OneCRM (Argentina):</strong> Sucesso na implementação em um ciclo de 9 meses, integrando novos processos comerciais e serviços via WhatsApp.</li>
+          <li><strong>América Central:</strong> Implantação do módulo Email-to-Case, substituindo caixas do Outlook por atendimento centralizado e gerando dashboards operacionais críticos.</li>
+          <li><strong>Lightning Migration:</strong> Priorização de 12 apps conectados e middlewares na migração do Salesforce Classic para Lightning.</li>
+        </ul>
+      </article>
 
-  <div class="card">
-    <h3>Electrolux</h3>
-    <p><b>Product Owner | Salesforce LATAM</b></p>
+      <article class="card">
+        <h3>Leroy Merlin</h3>
+        <p class="subtitle" style="font-size: 15px; margin-bottom: 10px;">Salesforce Administrator | Nov/2017 – Set/2021</p>
+        <ul>
+          <li>Responsável pelo suporte declarativo do ambiente Service Cloud.</li>
+          <li>Criação de reports, dashboards operacionais e KPIs para o Contact Center.</li>
+          <li>Treinamento de novos usuários e priorização de correções de bugs com o time de desenvolvimento.</li>
+        </ul>
+      </article>
+    </section>
 
-    <p>
-      Liderança de iniciativas estratégicas garantindo alinhamento entre negócio e tecnologia
-      em ambientes de alta complexidade.
-    </p>
+    <section id="projetos">
+      <h2>Iniciativas & Visão de Produto</h2>
+      <p style="margin-bottom: 20px;">Projetos que demonstram aplicação prática de UX/UI, desenvolvimento de produtos e visão empreendedora.</p>
+      
+      <div class="grid">
+        <article class="card">
+          <h3>App "A Dois" / "Mô"</h3>
+          <p>
+            Desenvolvimento de um aplicativo mobile voltado para a organização de rotinas, metas e interesses compartilhados para casais. Aplicação prática de princípios de UX/UI Design, estruturação de funcionalidades e pesquisa com usuários.
+          </p>
+        </article>
 
-    <ul>
-      <li>Rollout Salesforce em múltiplos países LATAM</li>
-      <li>Implantação Email-to-Case (transformação do atendimento)</li>
-      <li>Integração de canais como WhatsApp</li>
-      <li>Migração Salesforce Classic → Lightning</li>
-    </ul>
-  </div>
+        <article class="card">
+          <h3>Empreendedorismo Pet Market</h3>
+          <p>
+            Planejamento de negócios e estruturação de marca para um e-commerce de nicho focado em personalização de tags e joias para pets via gravação a laser. Envolve estratégia de precificação, operação e design de produto.
+          </p>
+        </article>
+      </div>
+    </section>
 
-  <div class="card">
-    <h3>Leroy Merlin</h3>
-    <p><b>Salesforce Administrator</b></p>
+    <section id="skills">
+      <h2>Tech Stack & Skills</h2>
+      <div class="card tags-container">
+        <span class="tag">Business Relationship Management</span>
+        <span class="tag">Product Ownership</span>
+        <span class="tag">Salesforce (Service Cloud)</span>
+        <span class="tag">UX/UI Design</span>
+        <span class="tag">Azure DevOps</span>
+        <span class="tag">Jira & ServiceNow</span>
+        <span class="tag">Figma</span>
+        <span class="tag">Mapeamento de Processos</span>
+        <span class="tag">Metodologias Ágeis</span>
+      </div>
+    </section>
 
-    <ul>
-      <li>Criação de dashboards e KPIs operacionais</li>
-      <li>Treinamento de usuários e suporte Service Cloud</li>
-      <li>Melhoria contínua da plataforma</li>
-    </ul>
-  </div>
-
-  <!-- PROJETOS -->
-  <h2>Projetos</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Email-to-Case LATAM</h3>
-      <p>
-        Estruturei o atendimento omnichannel substituindo comunicação via Outlook,
-        garantindo centralização e rastreabilidade.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Salesforce Rollout</h3>
-      <p>
-        Liderança na expansão da plataforma Salesforce em múltiplos países,
-        com definição de roadmap e priorização estratégica.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Lightning Migration</h3>
-      <p>
-        Modernização da plataforma com integração de sistemas
-        e melhoria da experiência do usuário.
-      </p>
-    </div>
-
-  </div>
-
-  <!-- IMPACTO -->
-  <h2>Impacto</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>+4 países</h3>
-      <p>Implementação Salesforce LATAM</p>
-    </div>
-
-    <div class="card">
-      <h3>Omnichannel</h3>
-      <p>Email + WhatsApp integrados</p>
-    </div>
-
-    <div class="card">
-      <h3>Alta complexidade</h3>
-      <p>Múltiplas integrações e stakeholders</p>
-    </div>
-
-  </div>
-
-  <!-- SKILLS -->
-  <h2>Skills</h2>
-  <div class="card">
-    <span class="tag">Salesforce</span>
-    <span class="tag">Product Owner</span>
-    <span class="tag">Business Analysis</span>
-    <span class="tag">Azure DevOps</span>
-    <span class="tag">Jira</span>
-    <span class="tag">ServiceNow</span>
-    <span class="tag">Figma</span>
-    <span class="tag">Flows</span>
-    <span class="tag">Dashboards</span>
-  </div>
-
-  <!-- CONTATO -->
-  <h2>Contato</h2>
-  <div class="card contact">
-    <a href="mailto:alanoca93@gmail.com">alanoca93@gmail.com</a>
-    <a href="https://www.linkedin.com/in/luisgustavoalanoca" target="_blank">LinkedIn</a>
-    <p>São Paulo - SP</p>
-  </div>
+    <section id="contato">
+      <h2>Contato</h2>
+      <div class="card contact">
+        <p>Aberto a conexões para discutir inovação, arquitetura Salesforce e experiência do usuário.</p>
+        <a href="mailto:alanoca93@gmail.com">📧 alanoca93@gmail.com</a>
+        <a href="https://www.linkedin.com/in/luisgustavoalanoca" target="_blank">💼 LinkedIn: /luisgustavoalanoca</a>
+        <p>📍 São Paulo - SP, Brasil</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Luis Alanoca
+    © 2026 Luis Gustavo Alanoca. Desenvolvido com foco em acessibilidade e performance.
   </footer>
 
 </div>
 
 </body>
 </html>
-``
